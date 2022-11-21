@@ -1,7 +1,7 @@
 import unittest
 
-from if_else import if_else
-from loop import loop
+from If_else import if_else
+from Loop import loop
 
 class TestSum(unittest.TestCase):
     def test_list_int(self):
