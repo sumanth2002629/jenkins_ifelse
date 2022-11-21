@@ -1,0 +1,28 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git 'https://github.com/sumanth2002629/jenkins_ifelse.git'
+            }
+        }
+        stage('Build if_else Code') {
+            steps {
+                sh "chmod u+x if_else.py"
+                sh "./if_else.py"
+            }
+        }
+        stage('Build loop Code') {
+            steps {
+                sh "chmod u+x loop.py"
+                sh "./loop.py"
+            }
+        }
+     stage('Test Code') {
+            steps {
+                sh "chmod u+x test.py"
+                sh "./test.py"
+            }
+        }
+    } 
+}
