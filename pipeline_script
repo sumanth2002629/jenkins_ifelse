@@ -8,14 +8,14 @@ pipeline {
         }
         stage('Build if_else Code') {
             steps {
-                sh "chmod u+x if_else.py"
-                sh "./if_else.py"
+                sh "chmod u+x If_else.py"
+                sh "./If_else.py"
             }
         }
         stage('Build loop Code') {
             steps {
-                sh "chmod u+x loop.py"
-                sh "./loop.py"
+                sh "chmod u+x Loop.py"
+                sh "./Loop.py"
             }
         }
      stage('Test Code') {
